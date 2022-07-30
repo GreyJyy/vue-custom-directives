@@ -1,5 +1,8 @@
+//切换高亮指令
+
 export default {
   bind(el, binding) {
+    //实现初始化页面指定第一个高亮
     initParams(el, binding)
   },
   update(el, binding) {
