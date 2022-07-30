@@ -1,29 +1,37 @@
 <template>
   <div>
-    <!-- v-focus test -->
-    <h3>v-focus</h3>
-    <!-- test for input -->
-    <div class="center">input:<input type="text" v-focus /></div>
-    <!-- test for textarea -->
-    <!-- <div class="center">textarea:<textarea v-focus></textarea></div> -->
+    <div class="wrap" style="margin-bottom: 50px">
+      <div v-for="(item, index) in cpns" :key="index">
+        <button @click="currentCpn = item">{{ item }}</button>
+      </div>
+    </div>
     <hr />
-
-    <!-- v-throttle test -->
-    <h3>v-throttle</h3>
-    <div class="center"><button @click="test1" v-throttle>Submit</button></div>
-    <hr />
+    <component :is="currentCpn"></component>
   </div>
 </template>
 <script>
+import BaseThrottle from '@/examples/BaseThrottle.vue'
+import BaseFocus from '@/examples/BaseFocus.vue'
+import BaseActive from '@/examples/BaseActive.vue'
 export default {
-  methods: {
-    test1() {
-      console.log('submit')
+  data() {
+    return {
+      currentCpn: 'BaseFocus',
+      cpns: ['BaseThrottle', 'BaseFocus', 'BaseActive']
     }
+  },
+  components: {
+    BaseThrottle,
+    BaseFocus,
+    BaseActive
   }
 }
 </script>
-<style scoped>
+<style>
+.wrap {
+  display: flex;
+  justify-content: space-evenly;
+}
 h3 {
   text-align: center;
 }
