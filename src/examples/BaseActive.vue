@@ -4,7 +4,7 @@
     <div
       class="nav-bar"
       v-active="{
-        cNode: 'nav-item',
+        defaultClass: 'nav-item',
         activeClass: 'nav-active',
         currentInd
       }"
@@ -40,7 +40,10 @@ export default {
   margin: auto;
   text-align: center;
   line-height: 30px;
-  border: 1px solid black;
+  font-size: 16px;
+  border-radius: 13px;
+  background-color: #50bfff;
+  border-color: #50bfff;
 }
 
 /* for activeClass*/

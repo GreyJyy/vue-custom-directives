@@ -44,4 +44,17 @@ textarea {
   overflow: hidden;
   resize: none;
 }
+button {
+  padding: 10px 15px;
+  margin-left: 0;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 13px;
+  background-color: #50bfff;
+  border-color: #50bfff;
+}
+button:hover {
+  background-color: rgb(115, 204, 255);
+  border-color: rgb(115, 204, 255);
+}
 </style>
