@@ -13,7 +13,7 @@ export default {
     if (typeof _val === 'function') _func = _val //如果传递的是函数则直接赋给func
     if (typeof _val === 'object') {
       //如果是对象则对对象进行解析
-      _func = _val.func || function () {}
+      _func = _val.func || function () { }
       _type = _val.type || 'click'
       _params = _val.params || []
     }
@@ -48,33 +48,35 @@ function throttle(callback, delay) {
 }
 
 //定时器时间戳结合版本 --如果需要的是首次立即执行,停止触发后也要再执行一次可以使用定时器与时间戳结合版本
-// function throttle(callback, delay) {
-//   let preTimeStamp = 0,
-//     timeout = null
-//   return function (...args) {
-//     //记录触发瞬间的时间戳
-//     const nowTimeStamp = +new Date(),
-//       difTimeStamp = nowTimeStamp - preTimeStamp
-//     if (difTimeStamp < delay) {
-//       //多次触发时,监测是否已经设置了定时器,如果有则等待已设置的定时器执行
-//       if (timeout) return
-//       //如果两次触发间隔在delay毫秒内,则设置一个定时器,在剩余时间(delay-两次触发间隔)后调用回调函数
-//       timeout = setTimeout(() => {
-//         callback.apply(this, args)
-//         //调用瞬间置空timeout便于下次执行
-//         timeout = null
-//         //将起始时间戳重置为调用瞬间的时间
-//         preTimeStamp = +new Date()
-//       }, delay - difTimeStamp)
-//       return
-//     }
-//     //如果两次触发间隔大于delay毫秒,则移除遗留的定时器
-//     clearTimeout(timeout)
-//     //置空timeout便于下次执行
-//     timeout = null
-//     //直接调用函数
-//     callback.apply(this, args)
-//     //将起始时间戳重置为触发瞬间的时间戳
-//     preTimeStamp = nowTimeStamp
-//   }
-// }
+/**
+ function throttle(callback, delay) {
+  let preTimeStamp = 0,
+    timeout = null
+  return function (...args) {
+    //记录触发瞬间的时间戳
+    const nowTimeStamp = +new Date(),
+      difTimeStamp = nowTimeStamp - preTimeStamp
+    if (difTimeStamp < delay) {
+      //多次触发时,监测是否已经设置了定时器,如果有则等待已设置的定时器执行
+      if (timeout) return
+      //如果两次触发间隔在delay毫秒内,则设置一个定时器,在剩余时间(delay-两次触发间隔)后调用回调函数
+      timeout = setTimeout(() => {
+        callback.apply(this, args)
+        //调用瞬间置空timeout便于下次执行
+        timeout = null
+        //将起始时间戳重置为调用瞬间的时间
+        preTimeStamp = +new Date()
+      }, delay - difTimeStamp)
+      return
+    }
+    //如果两次触发间隔大于delay毫秒,则移除遗留的定时器
+    clearTimeout(timeout)
+    //置空timeout便于下次执行
+    timeout = null
+    //直接调用函数
+    callback.apply(this, args)
+    //将起始时间戳重置为触发瞬间的时间戳
+    preTimeStamp = nowTimeStamp
+  }
+}
+ */

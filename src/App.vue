@@ -13,17 +13,19 @@
 import BaseThrottle from '@/examples/BaseThrottle.vue'
 import BaseFocus from '@/examples/BaseFocus.vue'
 import BaseActive from '@/examples/BaseActive.vue'
+import BaseEllipsis from './examples/BaseEllipsis.vue'
 export default {
   data() {
     return {
       currentCpn: 'BaseFocus',
-      cpns: ['BaseThrottle', 'BaseFocus', 'BaseActive']
+      cpns: ['BaseThrottle', 'BaseFocus', 'BaseActive', 'BaseEllipsis']
     }
   },
   components: {
     BaseThrottle,
     BaseFocus,
-    BaseActive
+    BaseActive,
+    BaseEllipsis
   }
 }
 </script>
@@ -32,18 +34,22 @@ export default {
   display: flex;
   justify-content: space-evenly;
 }
+
 h3 {
   text-align: center;
 }
+
 .center {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
+
 textarea {
   overflow: hidden;
   resize: none;
 }
+
 button {
   padding: 10px 15px;
   margin-left: 0;
@@ -53,6 +59,7 @@ button {
   background-color: #50bfff;
   border-color: #50bfff;
 }
+
 button:hover {
   background-color: rgb(115, 204, 255);
   border-color: rgb(115, 204, 255);
