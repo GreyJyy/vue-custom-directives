@@ -2,12 +2,14 @@ import focus from './modules/focus'
 import throttle from './modules/throttle'
 import active from './modules/active'
 import ellipsis from './modules/ellipsis'
+import empty from './modules/empty'
 
 const directives = {
   focus,
   throttle,
   active,
-  ellipsis
+  ellipsis,
+  empty
 }
 
 export default {

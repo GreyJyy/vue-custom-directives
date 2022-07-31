@@ -14,18 +14,21 @@ import BaseThrottle from '@/examples/BaseThrottle.vue'
 import BaseFocus from '@/examples/BaseFocus.vue'
 import BaseActive from '@/examples/BaseActive.vue'
 import BaseEllipsis from './examples/BaseEllipsis.vue'
+import BaseEmpty from './examples/BaseEmpty.vue'
+
 export default {
   data() {
     return {
       currentCpn: 'BaseFocus',
-      cpns: ['BaseThrottle', 'BaseFocus', 'BaseActive', 'BaseEllipsis']
+      cpns: ['BaseThrottle', 'BaseFocus', 'BaseActive', 'BaseEllipsis', 'BaseEmpty']
     }
   },
   components: {
     BaseThrottle,
     BaseFocus,
     BaseActive,
-    BaseEllipsis
+    BaseEllipsis,
+    BaseEmpty
   }
 }
 </script>
