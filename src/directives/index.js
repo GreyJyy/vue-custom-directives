@@ -3,13 +3,15 @@ import throttle from './modules/throttle'
 import active from './modules/active'
 import ellipsis from './modules/ellipsis'
 import empty from './modules/empty'
+import backtop from './modules/backtop'
 
 const directives = {
   focus,
   throttle,
   active,
   ellipsis,
-  empty
+  empty,
+  backtop
 }
 
 export default {

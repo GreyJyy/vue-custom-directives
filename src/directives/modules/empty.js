@@ -3,6 +3,7 @@
 import Vue from 'vue'
 
 export default {
+  //当资源丢失时显示默认内容
   update(el, binding) {
     //默认添加相对定位
     el.style.position = el.style.position || 'relative'

@@ -15,12 +15,13 @@ import BaseFocus from '@/examples/BaseFocus.vue'
 import BaseActive from '@/examples/BaseActive.vue'
 import BaseEllipsis from './examples/BaseEllipsis.vue'
 import BaseEmpty from './examples/BaseEmpty.vue'
+import BaseBacktop from './examples/BaseBacktop.vue'
 
 export default {
   data() {
     return {
       currentCpn: 'BaseFocus',
-      cpns: ['BaseThrottle', 'BaseFocus', 'BaseActive', 'BaseEllipsis', 'BaseEmpty']
+      cpns: ['BaseThrottle', 'BaseFocus', 'BaseActive', 'BaseEllipsis', 'BaseEmpty', 'BaseBacktop']
     }
   },
   components: {
@@ -28,7 +29,8 @@ export default {
     BaseFocus,
     BaseActive,
     BaseEllipsis,
-    BaseEmpty
+    BaseEmpty,
+    BaseBacktop
   }
 }
 </script>
